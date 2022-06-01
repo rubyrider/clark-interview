@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+def system!(*args)
+  system(*args) || abort("\n== Command #{args} failed ==")
+end
+
+puts "Generating documentation"
+
+system! 'yard --private --protected *.rb'

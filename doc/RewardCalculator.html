@@ -87,6 +87,11 @@
   
   
   
+  <dl>
+      <dt>Includes:</dt>
+      <dd><span class='object_link'><a href="Validators.html" title="Validators (module)">Validators</a></span></dd>
+  </dl>
+  
   
 
   
@@ -116,15 +121,1279 @@
 
 
 
+  <h2>Instance Attribute Summary <small><a href="#" class="summary_toggle">collapse</a></small></h2>
+  <ul class="summary">
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#friends-instance_method" title="#friends (instance method)">#<strong>friends</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute friends.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#input_file-instance_method" title="#input_file (instance method)">#<strong>input_file</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute input_file.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#invitations-instance_method" title="#invitations (instance method)">#<strong>invitations</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute invitations.</p>
+</div></span>
+  
+</li>
+
+    
+      <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#rewards-instance_method" title="#rewards (instance method)">#<strong>rewards</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+    
+      <span class="note title readonly">readonly</span>
+    
+    
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Returns the value of attribute rewards.</p>
+</div></span>
+  
+</li>
+
+    
+  </ul>
 
 
 
 
+  
+    <h2>
+      Instance Method Summary
+      <small><a href="#" class="summary_toggle">collapse</a></small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#accepted_invitations-instance_method" title="#accepted_invitations (instance method)">#<strong>accepted_invitations</strong>  &#x21d2; Array </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Calculate accepted_invitation on runtime!.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#build_invitation-instance_method" title="#build_invitation (instance method)">#<strong>build_invitation</strong>(input)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Builds invitation object, call parser to find the appropriate values.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#call-instance_method" title="#call (instance method)">#<strong>call</strong>  &#x21d2; Hash|Boolean </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The main access point method to build up streams from the input file and calculate.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#collect_inputs!-instance_method" title="#collect_inputs! (instance method)">#<strong>collect_inputs!</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Collect and pass the input lines from the yielded input by the input file handler.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#find_referrer_position-instance_method" title="#find_referrer_position (instance method)">#<strong>find_referrer_position</strong>(referrer)  &#x21d2; Tree::TreeNode </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The process to find referrer&#39;s position the reward network tree.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">#<strong>initialize</strong>(input_file = nil)  &#x21d2; RewardCalculator </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Takes an input file to process the result.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#map_recommendations!-instance_method" title="#map_recommendations! (instance method)">#<strong>map_recommendations!</strong>  &#x21d2; Array </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Allocate accepted invitations to receive the reward!.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#referred_for-instance_method" title="#referred_for (instance method)">#<strong>referred_for</strong>(friend)  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Find the referrer, earliest one is the priority.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#reward!-instance_method" title="#reward! (instance method)">#<strong>reward!</strong>(friend)  &#x21d2; Void </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The main call that reward a friend and their parents.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#reward_parents-instance_method" title="#reward_parents (instance method)">#<strong>reward_parents</strong>(parent, depth = 0, reward = 0.5)  &#x21d2; Tree::TreeNode </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>The process to rewards and distribute rewards to parents.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="private ">
+  <span class="summary_signature">
+    
+      <a href="#validate!-instance_method" title="#validate! (instance method)">#<strong>validate!</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  <span class="note title private">private</span>
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Just another validators!.</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <h3 class="inherited">Methods included from <span class='object_link'><a href="Validators.html" title="Validators (module)">Validators</a></span></h3>
+  <p class="inherited"><span class='object_link'><a href="Validators.html#date_validator!-instance_method" title="Validators#date_validator! (method)">#date_validator!</a></span>, <span class='object_link'><a href="Validators.html#file_format_validator!-instance_method" title="Validators#file_format_validator! (method)">#file_format_validator!</a></span>, <span class='object_link'><a href="Validators.html#file_size_validator!-instance_method" title="Validators#file_size_validator! (method)">#file_size_validator!</a></span>, <span class='object_link'><a href="Validators.html#included-class_method" title="Validators.included (method)">included</a></span>, <span class='object_link'><a href="Validators.html#inclusion_validator!-instance_method" title="Validators#inclusion_validator! (method)">#inclusion_validator!</a></span>, <span class='object_link'><a href="Validators.html#invalid%3F-instance_method" title="Validators#invalid? (method)">#invalid?</a></span>, <span class='object_link'><a href="Validators.html#presence_validator!-instance_method" title="Validators#presence_validator! (method)">#presence_validator!</a></span>, <span class='object_link'><a href="Validators.html#to_errors-instance_method" title="Validators#to_errors (method)">#to_errors</a></span>, <span class='object_link'><a href="Validators.html#valid%3F-instance_method" title="Validators#valid? (method)">#valid?</a></span></p>
+<div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    #<strong>initialize</strong>(input_file = nil)  &#x21d2; <tt><span class='object_link'><a href="" title="RewardCalculator (class)">RewardCalculator</a></span></tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Takes an input file to process the result</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>input_file</span>
+      
+      
+        <span class='type'>(<tt>File</tt>)</span>
+      
+      
+        <em class="default">(defaults to: <tt>nil</tt>)</em>
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>in txt format</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+29
+30
+31
+32
+33
+34
+35</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'reward_calculator.rb', line 29</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span><span class='lparen'>(</span><span class='id identifier rubyid_input_file'>input_file</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='ivar'>@input_file</span>    <span class='op'>=</span> <span class='id identifier rubyid_input_file'>input_file</span>
+  <span class='ivar'>@input_handler</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="InputFileHandler.html" title="InputFileHandler (class)">InputFileHandler</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="InputFileHandler.html#initialize-instance_method" title="InputFileHandler#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_input_file'>input_file</span><span class='rparen'>)</span>
+  <span class='ivar'>@invitations</span>   <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+  <span class='ivar'>@friends</span>       <span class='op'>=</span> <span class='const'>Tree</span><span class='op'>::</span><span class='const'>TreeNode</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
+  <span class='ivar'>@rewards</span>       <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+  <div id="instance_attr_details" class="attr_details">
+    <h2>Instance Attribute Details</h2>
+    
+      
+      <span id=""></span>
+      <div class="method_details first">
+  <h3 class="signature first" id="friends-instance_method">
+  
+    #<strong>friends</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute friends.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+22
+23
+24</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'reward_calculator.rb', line 22</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_friends'>friends</span>
+  <span class='ivar'>@friends</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="input_file-instance_method">
+  
+    #<strong>input_file</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute input_file.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+22
+23
+24</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'reward_calculator.rb', line 22</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_input_file'>input_file</span>
+  <span class='ivar'>@input_file</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="invitations-instance_method">
+  
+    #<strong>invitations</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute invitations.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+22
+23
+24</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'reward_calculator.rb', line 22</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_invitations'>invitations</span>
+  <span class='ivar'>@invitations</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      
+      <span id=""></span>
+      <div class="method_details ">
+  <h3 class="signature " id="rewards-instance_method">
+  
+    #<strong>rewards</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(readonly)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns the value of attribute rewards.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+22
+23
+24</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'reward_calculator.rb', line 22</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_rewards'>rewards</span>
+  <span class='ivar'>@rewards</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="accepted_invitations-instance_method">
+  
+    #<strong>accepted_invitations</strong>  &#x21d2; <tt>Array</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Calculate accepted_invitation on runtime!</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>of accepted invitations</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+40
+41
+42</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'reward_calculator.rb', line 40</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_accepted_invitations'>accepted_invitations</span>
+  <span class='id identifier rubyid_invitations'>invitations</span><span class='period'>.</span><span class='id identifier rubyid_select'>select</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_accepted_invitation'>accepted_invitation</span><span class='op'>|</span> <span class='id identifier rubyid_accepted_invitation'>accepted_invitation</span><span class='period'>.</span><span class='id identifier rubyid_accepted?'>accepted?</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="build_invitation-instance_method">
+  
+    #<strong>build_invitation</strong>(input)  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Builds invitation object, call parser to find the appropriate values</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li><span class='object_link'><a href="Parser.html" title="Parser (class)">service object for details</a></span></li>
+    
+  </ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+144
+145
+146
+147
+148
+149
+150
+151
+152</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'reward_calculator.rb', line 144</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_build_invitation'>build_invitation</span><span class='lparen'>(</span><span class='id identifier rubyid_input'>input</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_parser'>parser</span> <span class='op'>=</span> <span class='const'><span class='object_link'><a href="Parser.html" title="Parser (class)">Parser</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Parser.html#initialize-instance_method" title="Parser#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_input'>input</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_call'><span class='object_link'><a href="Parser.html#call-instance_method" title="Parser#call (method)">call</a></span></span>
+  
+  <span class='kw'>if</span> <span class='id identifier rubyid_parser'>parser</span><span class='period'>.</span><span class='id identifier rubyid_status'>status</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>recommends</span><span class='tstring_end'>&#39;</span></span>
+    <span class='const'><span class='object_link'><a href="Invitation.html" title="Invitation (class)">Invitation</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Invitation.html#initialize-instance_method" title="Invitation#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_parser'>parser</span><span class='period'>.</span><span class='id identifier rubyid_datetime'>datetime</span><span class='comma'>,</span> <span class='id identifier rubyid_parser'>parser</span><span class='period'>.</span><span class='id identifier rubyid_status'>status</span><span class='comma'>,</span> <span class='id identifier rubyid_parser'>parser</span><span class='period'>.</span><span class='id identifier rubyid_invited_to'>invited_to</span><span class='comma'>,</span> <span class='id identifier rubyid_parser'>parser</span><span class='period'>.</span><span class='id identifier rubyid_invited_by'>invited_by</span><span class='rparen'>)</span>
+  <span class='kw'>else</span>
+    <span class='const'><span class='object_link'><a href="Invitation.html" title="Invitation (class)">Invitation</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'><span class='object_link'><a href="Invitation.html#initialize-instance_method" title="Invitation#initialize (method)">new</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_parser'>parser</span><span class='period'>.</span><span class='id identifier rubyid_datetime'>datetime</span><span class='comma'>,</span> <span class='id identifier rubyid_parser'>parser</span><span class='period'>.</span><span class='id identifier rubyid_status'>status</span><span class='comma'>,</span> <span class='id identifier rubyid_parser'>parser</span><span class='period'>.</span><span class='id identifier rubyid_invited_by'>invited_by</span><span class='rparen'>)</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="call-instance_method">
+  
+    #<strong>call</strong>  &#x21d2; <tt>Hash|Boolean</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The main access point method to build up streams from the input file and calculate</p>
+
+<p>Also validates all inputs/invitations etc</p>
+
+<p>Build the referral tree histories</p>
+
+<p>and the return the @rewards hash</p>
+
+<p>check @errors attributes for the details error message</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Hash|Boolean</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>@reward or a false class. In case of validation failed, please</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'reward_calculator.rb', line 54</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_call'>call</span>
+  <span class='id identifier rubyid_collect_inputs!'>collect_inputs!</span>
+  
+  <span class='id identifier rubyid_validate!'>validate!</span>
+  
+  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_valid?'>valid?</span>
+  
+  <span class='id identifier rubyid_map_recommendations!'>map_recommendations!</span>
+  
+  <span class='ivar'>@rewards</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="collect_inputs!-instance_method">
+  
+    #<strong>collect_inputs!</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Collect and pass the input lines from the yielded input by the input file handler</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+138
+139
+140</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'reward_calculator.rb', line 138</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_collect_inputs!'>collect_inputs!</span>
+  <span class='ivar'>@input_handler</span><span class='period'>.</span><span class='id identifier rubyid_call'>call</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_input'>input</span><span class='op'>|</span> <span class='ivar'>@invitations</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_build_invitation'>build_invitation</span><span class='lparen'>(</span><span class='id identifier rubyid_input'>input</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="find_referrer_position-instance_method">
+  
+    #<strong>find_referrer_position</strong>(referrer)  &#x21d2; <tt>Tree::TreeNode</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The process to find referrer&#39;s position the reward network tree</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Tree::TreeNode</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+111
+112
+113
+114
+115
+116
+117
+118
+119</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'reward_calculator.rb', line 111</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_find_referrer_position'>find_referrer_position</span><span class='lparen'>(</span><span class='id identifier rubyid_referrer'>referrer</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_referrer_node'>referrer_node</span> <span class='op'>=</span> <span class='kw'>nil</span>
+  
+  <span class='ivar'>@friends</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_a_friend'>a_friend</span><span class='op'>|</span>
+    <span class='kw'>break</span> <span class='id identifier rubyid_referrer_node'>referrer_node</span> <span class='op'>=</span> <span class='id identifier rubyid_a_friend'>a_friend</span> <span class='kw'>if</span> <span class='id identifier rubyid_a_friend'>a_friend</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span> <span class='op'>==</span> <span class='id identifier rubyid_referrer'>referrer</span>
+  <span class='kw'>end</span>
+  
+  <span class='id identifier rubyid_referrer_node'>referrer_node</span> <span class='op'>||</span> <span class='ivar'>@friends</span> <span class='op'>&lt;&lt;</span> <span class='const'>Tree</span><span class='op'>::</span><span class='const'>TreeNode</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_referrer'>referrer</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="map_recommendations!-instance_method">
+  
+    #<strong>map_recommendations!</strong>  &#x21d2; <tt>Array</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Allocate accepted invitations to receive the reward!</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+124
+125
+126</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'reward_calculator.rb', line 124</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_map_recommendations!'>map_recommendations!</span>
+  <span class='id identifier rubyid_accepted_invitations'>accepted_invitations</span><span class='period'>.</span><span class='id identifier rubyid_map'>map</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_acceptance'>acceptance</span><span class='op'>|</span> <span class='id identifier rubyid_reward!'>reward!</span><span class='lparen'>(</span><span class='id identifier rubyid_acceptance'>acceptance</span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="referred_for-instance_method">
+  
+    #<strong>referred_for</strong>(friend)  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Find the referrer, earliest one is the priority</p>
+
+<p>@<a href="Invitation">return</a> object with recommendation status</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+71
+72
+73</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'reward_calculator.rb', line 71</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_referred_for'>referred_for</span><span class='lparen'>(</span><span class='id identifier rubyid_friend'>friend</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_invitations'>invitations</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_invitation'>invitation</span><span class='op'>|</span> <span class='id identifier rubyid_invitation'>invitation</span><span class='period'>.</span><span class='id identifier rubyid_invited_to'>invited_to</span> <span class='op'>==</span> <span class='id identifier rubyid_friend'>friend</span><span class='period'>.</span><span class='id identifier rubyid_invited_to'>invited_to</span> <span class='rbrace'>}</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="reward!-instance_method">
+  
+    #<strong>reward!</strong>(friend)  &#x21d2; <tt>Void</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The main call that reward a friend and their parents</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Void</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'reward_calculator.rb', line 78</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_reward!'>reward!</span><span class='lparen'>(</span><span class='id identifier rubyid_friend'>friend</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_referrer'>referrer</span> <span class='op'>=</span> <span class='id identifier rubyid_referred_for'>referred_for</span><span class='lparen'>(</span><span class='id identifier rubyid_friend'>friend</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_invited_by'>invited_by</span>
+  
+  <span class='kw'>return</span> <span class='kw'>false</span> <span class='kw'>unless</span> <span class='id identifier rubyid_referrer'>referrer</span>
+  
+  <span class='id identifier rubyid_friends_connection'>friends_connection</span> <span class='op'>=</span> <span class='const'>Tree</span><span class='op'>::</span><span class='const'>TreeNode</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_friend'>friend</span><span class='period'>.</span><span class='id identifier rubyid_invited_to'>invited_to</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_position'>position</span>           <span class='op'>=</span> <span class='id identifier rubyid_find_referrer_position'>find_referrer_position</span><span class='lparen'>(</span><span class='id identifier rubyid_referrer'>referrer</span><span class='rparen'>)</span>
+  <span class='id identifier rubyid_position'>position</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_friends_connection'>friends_connection</span>
+  
+  <span class='id identifier rubyid_reward_parents'>reward_parents</span><span class='lparen'>(</span><span class='id identifier rubyid_position'>position</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="reward_parents-instance_method">
+  
+    #<strong>reward_parents</strong>(parent, depth = 0, reward = 0.5)  &#x21d2; <tt>Tree::TreeNode</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>The process to rewards and distribute rewards to parents</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Tree::TreeNode</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'reward_calculator.rb', line 94</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_reward_parents'>reward_parents</span><span class='lparen'>(</span><span class='id identifier rubyid_parent'>parent</span><span class='comma'>,</span> <span class='id identifier rubyid_depth'>depth</span> <span class='op'>=</span> <span class='int'>0</span><span class='comma'>,</span> <span class='id identifier rubyid_reward'>reward</span> <span class='op'>=</span> <span class='float'>0.5</span><span class='rparen'>)</span>
+  <span class='kw'>return</span> <span class='kw'>if</span> <span class='id identifier rubyid_depth'>depth</span> <span class='op'>&gt;</span> <span class='int'>2</span>
+  <span class='kw'>return</span> <span class='kw'>if</span> <span class='id identifier rubyid_parent'>parent</span><span class='period'>.</span><span class='id identifier rubyid_nil?'>nil?</span>
+  <span class='kw'>return</span> <span class='kw'>if</span> <span class='id identifier rubyid_parent'>parent</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='period'>.</span><span class='id identifier rubyid_empty?'>empty?</span>
+  
+  <span class='id identifier rubyid_parent'>parent</span><span class='period'>.</span><span class='id identifier rubyid_content'>content</span> <span class='op'>||=</span> <span class='int'>1</span>
+  <span class='id identifier rubyid_parent'>parent</span><span class='period'>.</span><span class='id identifier rubyid_content'>content</span> <span class='op'>+=</span> <span class='lparen'>(</span><span class='id identifier rubyid_reward'>reward</span><span class='op'>/</span><span class='id identifier rubyid_depth'>depth</span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_depth'>depth</span> <span class='op'>&gt;</span> <span class='int'>0</span>
+  
+  <span class='ivar'>@rewards</span><span class='lbracket'>[</span><span class='id identifier rubyid_parent'>parent</span><span class='period'>.</span><span class='id identifier rubyid_name'>name</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_parent'>parent</span><span class='period'>.</span><span class='id identifier rubyid_content'>content</span>
+  
+  <span class='id identifier rubyid_reward_parents'>reward_parents</span><span class='lparen'>(</span><span class='id identifier rubyid_parent'>parent</span><span class='period'>.</span><span class='id identifier rubyid_parent'>parent</span><span class='comma'>,</span> <span class='lparen'>(</span><span class='id identifier rubyid_depth'>depth</span><span class='period'>.</span><span class='id identifier rubyid_next'>next</span><span class='rparen'>)</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="validate!-instance_method">
+  
+    #<strong>validate!</strong>  &#x21d2; <tt>Object</tt>  <span class="extras">(private)</span>
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Just another validators!</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+129
+130
+131
+132
+133
+134
+135</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'reward_calculator.rb', line 129</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_validate!'>validate!</span>
+  <span class='kw'>super</span> <span class='kw'>do</span>
+    <span class='const'><span class='object_link'><a href="Validators/Error.html" title="Validators::Error (class)">Error</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Input</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>data is not valid</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>if</span> <span class='id identifier rubyid_invitations'>invitations</span><span class='period'>.</span><span class='id identifier rubyid_find'>find</span><span class='lparen'>(</span><span class='op'>&amp;</span><span class='symbol'>:invalid?</span><span class='rparen'>)</span><span class='op'>&amp;.</span><span class='id identifier rubyid_exist?'>exist?</span>
+    
+    <span class='id identifier rubyid_presence_validator!'>presence_validator!</span><span class='lparen'>(</span><span class='id identifier rubyid_input_file'>input_file</span><span class='rparen'>)</span> <span class='lbrace'>{</span> <span class='const'><span class='object_link'><a href="Validators/Error.html" title="Validators::Error (class)">Error</a></span></span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>InputFile</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>should be present</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='rbrace'>}</span>
+  <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
 
 </div>
 
       <div id="footer">
-  Generated on Wed Jun  1 08:28:30 2022 by
+  Generated on Wed Jun  1 08:44:27 2022 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.27 (ruby-2.7.1).
 </div>

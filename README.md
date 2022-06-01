@@ -26,6 +26,14 @@ How to test, right? Just type the following and hit enter:
 bin/console
 ```
 
+Enter the followings example:
+```ruby
+   file = File.new('./sample.txt')
+   reward_builder = RewardCalculator.new(file)
+   reward_builder.call
+   # => {"A"=>1.75, "B"=>1.5, "C"=>1}
+```
+
 ## About the System Design Concept: A Top Level Story
 
 The whole calculator is built with 3 main plain old ruby service objects and they are as following"

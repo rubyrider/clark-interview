@@ -18,6 +18,30 @@ Outputs:
 { “A”: 1.75, “B”: 1.5, “C”: 1 }
 ```
 
+## Setup
+
+Open your terminal and navigate the project directory and install bundler as following:
+
+```bash
+bundle install
+```
+
+And you are done!
+
+## How to start the server:
+To start the server type and hit the following in your bash:
+
+```bash
+ruby mini_web_service.rb
+```
+
+Now, open the browser, and enter the localhost and port you found in the console log. The default is
+`http://localhost:4567/`
+
+Follow the instruction and verify!
+
+You can also play with the interactive console.
+
 ## Interactive Console
 
 How to test, right? Just type the following and hit enter:

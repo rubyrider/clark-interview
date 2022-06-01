@@ -34,8 +34,8 @@ class InputFileHandler
     # @@see Validator module for details
   def validate!
     super do
-      file_format_validator!(file, '.txt')
-      file_size_validator!(file, MAXIMUM_FILE_SIZE)
+      file_format_validator!(file, '.txt') { Error.new("format", "unsupported format") }
+      file_size_validator!(file, MAXIMUM_FILE_SIZE) { Error.new("file size", "invalid file size, max: 2mb") }
     end
   end
 end

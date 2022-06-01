@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require 'irb'
+
+require_relative '../reward_calculator'
+
+IRB.start

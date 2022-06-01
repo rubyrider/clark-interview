@@ -26,7 +26,7 @@ autoload :Parser, "./parser"
 class RewardCalculator
   include Validators
   
-  attr_reader :input_file, :invitations, :friends, :rewards
+  attr_reader :input_file, :invitations, :friends, :rewards, :input_handler
   
   # Takes an input file to process the result
   #
@@ -59,11 +59,11 @@ class RewardCalculator
   # @return [Hash|Boolean] @reward or a false class. In case of validation failed, please
   # check @errors attributes for the details error message
   def call
+    validate!
+  
     collect_inputs!
     
-    validate!
-    
-    return false unless valid?
+    return errors unless valid?
     
     map_recommendations!
     
@@ -135,15 +135,16 @@ class RewardCalculator
     # Just another validators!
     def validate!
       super do
-        Error.new('Input', 'data is not valid') if invitations.find(&:invalid?)&.exist?
-        
-        presence_validator!(input_file) { Error.new('InputFile', 'should be present') }
+        file_format_validator!(input_file, '.txt') { Error.new('InputFile', 'invalid format, only txt file is allowed') }
+        file_size_validator!(input_file) { Error.new('InputFile', 'should be maximum 2mb') }
       end
     end
     
     # Collect and pass the input lines from the yielded input by the input file handler
     def collect_inputs!
       @input_handler.call { |input| @invitations << build_invitation(input) }
+
+      Error.new('Input', 'data is not valid') if invitations.find(&:invalid?)&.exist?
     end
     
     # Builds invitation object, call parser to find the appropriate values

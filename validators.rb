@@ -28,7 +28,14 @@ module Validators
   # The basic Error struct to hold error message with minimal structure
   #
   # @return [Error] object with the field/subject and error message attributes
-  Error = Struct.new(:on, :message, :type)
+  Error = Struct.new(:on, :message, :type) do
+    def to_json
+      {
+        on: self.on,
+        message: self.message
+      }.to_json
+    end
+  end
   
   def self.included(base)
     base.attr_accessor :errors, :valid
@@ -146,7 +153,7 @@ module Validators
     #   and append to errors block if validation fails
     #
     # @return [Boolean]
-    def file_size_validator!(file, maximum_size)
+    def file_size_validator!(file, maximum_size = InputFileHandler::MAXIMUM_FILE_SIZE)
       return true if File.new(file).size <= maximum_size
 
       to_errors << yield

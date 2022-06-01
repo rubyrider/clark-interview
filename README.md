@@ -18,10 +18,6 @@ Outputs:
 { “A”: 1.75, “B”: 1.5, “C”: 1 }
 ```
 
-## Documentation
-
-The code is documented using Yard Doc. Feel free to check the doc folder.
-
 ## Interactive Console
 
 How to test, right? Just type the following and hit enter:
@@ -30,3 +26,35 @@ How to test, right? Just type the following and hit enter:
 bin/console
 ```
 
+## About the System Design Concept: A Top Level Story
+
+The whole calculator is built with 3 main plain old ruby service objects and they are as following"
+
+```ruby
+InputFileHandler
+Invitation
+Parser
+RewardCalculator # The main entry point
+```
+
+1. The reward calculator takes the file input and pass it on to `InputFileHandler`
+
+2. The `InputFileHandler` receives the file and validate and start parsing news 
+lines and yield each line to the `RewardCalculator` service object.
+
+3. The `RewardCalculator` then pass the lines getting from the yieldings of `InputFileHandler` to
+the `Parser` service object. The `Parser` return the tokens. `Strscan` is used 
+to efficiently build the tokens by scanning the input text.
+
+4. The tokens from the `Parser` is being passed to `Invitation` builder service object and built.
+
+5. `RewardCalculator` will than check for everything with validators and do the calculator.
+
+
+For the details code documentation run the yard server with the following command:
+
+```ruby
+yard server
+```
+
+and hit the `http://0.0.0.0:8808` on your favorite browser/

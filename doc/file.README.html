@@ -66,20 +66,44 @@
 
 <p>Outputs: <code>ruby { “A”: 1.75, “B”: 1.5, “C”: 1 } </code></p>
 
-<h2 id="label-Documentation">Documentation</h2>
-
-<p>The code is documented using Yard Doc. Feel free to check the doc folder.</p>
-
 <h2 id="label-Interactive+Console">Interactive Console</h2>
 
 <p>How to test, right? Just type the following and hit enter:</p>
 
 <pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_bin'>bin</span><span class='op'>/</span><span class='id identifier rubyid_console'>console</span>
 </code></pre>
+
+<h2 id="label-About+the+System+Design+Concept-3A+A+Top+Level+Story">About the System Design Concept: A Top Level Story</h2>
+
+<p>The whole calculator is built with 3 main plain old ruby service objects and they are as following“</p>
+
+<pre class="code ruby"><code class="ruby"><span class='const'><span class='object_link'><a href="InputFileHandler.html" title="InputFileHandler (class)">InputFileHandler</a></span></span>
+<span class='const'><span class='object_link'><a href="Invitation.html" title="Invitation (class)">Invitation</a></span></span>
+<span class='const'><span class='object_link'><a href="Parser.html" title="Parser (class)">Parser</a></span></span>
+<span class='const'><span class='object_link'><a href="RewardCalculator.html" title="RewardCalculator (class)">RewardCalculator</a></span></span> <span class='comment'># The main entry point
+</span></code></pre>
+<ol><li>
+<p>The reward calculator takes the file input and pass it on to <code>InputFileHandler</code></p>
+</li><li>
+<p>The <code>InputFileHandler</code> receives the file and validate and start parsing news lines and yield each line to the <code>RewardCalculator</code> service object.</p>
+</li><li>
+<p>The <code>RewardCalculator</code> then pass the lines getting from the yieldings of <code>InputFileHandler</code> to the <code>Parser</code> service object. The <code>Parser</code> return the tokens. <code>Strscan</code> is used to efficiently build the tokens by scanning the input text.</p>
+</li><li>
+<p>The tokens from the <code>Parser</code> is being passed to <code>Invitation</code> builder service object and built.</p>
+</li><li>
+<p><code>RewardCalculator</code> will than check for everything with validators and do the calculator.</p>
+</li></ol>
+
+<p>For the details code documentation run the yard server with the following command:</p>
+
+<pre class="code ruby"><code class="ruby"><span class='id identifier rubyid_yard'>yard</span> <span class='id identifier rubyid_server'>server</span>
+</code></pre>
+
+<p>and hit the <code>http://0.0.0.0:8808</code> on your favorite browser/</p>
 </div></div>
 
       <div id="footer">
-  Generated on Wed Jun  1 08:14:49 2022 by
+  Generated on Wed Jun  1 08:28:29 2022 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.27 (ruby-2.7.1).
 </div>

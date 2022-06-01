@@ -6,6 +6,7 @@ Bundler.require
 # Auto loaders for the other services!
 autoload :InputFileHandler, "./input_file_handler.rb"
 autoload :Invitation, "./invitation"
+autoload :Parser, "./parser"
 
 # The entry point service for this assignment
 #
